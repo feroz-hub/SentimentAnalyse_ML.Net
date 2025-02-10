@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Sentiment Analysis";
+}
+
+<h2>Sentiment Analysis</h2>
+
+<form method="post" action="/Sentiment/Predict">
+    <div class="form-group">
+        <label for="userInput">Enter Text:</label>
+        <input type="text" id="userInput" name="userInput" class="form-control" value="@ViewBag.UserInput" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Analyze Sentiment</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <h3>Text: <strong>@ViewBag.UserInput</strong></h3>
+    <h3>Sentiment: <strong>@ViewBag.Result</strong></h3>
+}
