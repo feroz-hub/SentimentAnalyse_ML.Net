@@ -10,8 +10,8 @@ public class ModelTrainer
    
     // ✅ Get absolute path to src/SentimentAPI/
     private static readonly string ProjectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../"));
-    private static readonly string SentimentAPIPath = Path.Combine(ProjectRoot, "src/SentimentAPI");
-    private static readonly string ModelPath = Path.Combine(SentimentAPIPath, "sentiment_model.zip");
+    private static readonly string SentimentApiPath = Path.Combine(ProjectRoot, "src/SentimentAPI");
+    private static readonly string ModelPath = Path.Combine(SentimentApiPath, "sentiment_model.zip");
 
 
 
@@ -19,9 +19,9 @@ public class ModelTrainer
     {
         Console.WriteLine($"Saving model to: {ModelPath}");
         // ✅ Ensure SentimentAPI directory exists
-        if (!Directory.Exists(SentimentAPIPath))
+        if (!Directory.Exists(SentimentApiPath))
         {
-            Console.WriteLine($"Error: SentimentAPI directory does not exist at {SentimentAPIPath}");
+            Console.WriteLine($"Error: SentimentAPI directory does not exist at {SentimentApiPath}");
             return;
         }
 
